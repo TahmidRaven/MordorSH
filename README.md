@@ -8,9 +8,7 @@ To compile and run MordorSH, use the following command:
 
 ```bash
 gcc -o mordorsh mordorsh.c
+```
 
-
-![mordorsh02](https://github.com/user-attachments/assets/7aa5e1ad-2c5d-442b-91d8-3cbe91292868)
-
-![mordor03](https://github.com/user-attachments/assets/d90b3ba0-633c-4d8b-aabc-a30836e80738)
-
+![mordorsh02](https://github.com/user-attachments/assets/080b3ed8-ec81-4189-82aa-051f988d76a3)
+![mordor03](https://github.com/user-attachments/assets/4d69786f-d5c8-46bd-b9e7-2b2a924a10c3)
