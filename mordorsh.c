@@ -6,6 +6,9 @@
 #include <fcntl.h>
 #include <signal.h>
 #include <termios.h>
+// #include <readline/readline.h>
+// #include <readline/history.h> 
+
 
 
 #define MAX_CMD_LEN 1024
@@ -20,7 +23,9 @@ pid_t child_pid = -1;
 void show_man() {
     printf("\n--- MordorSH MANUAL ---\n");
     printf("Created by: TahmidRaven\n\n");
-    printf("Supported Commands:\n");
+    printf("Visit my GitHub: https://github.com/TahmidRaven\n");
+    printf("--------------------------------------------------\n");
+    printf("MordorSH is a Lord of The Rings shell that supports:\n");
     printf("  - Any valid system command (e.g., mkdir,cd, ls, pwd, echo, etc.)\n");
     printf("  - Ctrl+C             : Interrupt the current command\n");
     printf("  - exit               : Exit the shell\n");
@@ -38,6 +43,7 @@ void show_man() {
     printf("  - neofetch           : Show system information\n");
     printf("--------------------------\n\n");
 }
+
 
 void print_prompt() {
     char cwd[1024];
@@ -336,6 +342,11 @@ int main() {
         printf("--------------------------------------------------\n");
         
         printf("Created by: TahmidRaven\n\n");
+        printf("Visit my GitHub: https://github.com/TahmidRaven\n");
+        printf("--------------------------------------------------\n");
+
+        printf("\n");
+
     printf("Type \"man\" to see the list of available commands.\n\n");
 
     while (1) {
@@ -364,7 +375,9 @@ int main() {
                             strcpy(input, history[history_count - 1 - history_index]);
                             input_len = strlen(input);
                             printf("\33[2K\r"); // clear line
-                            printf("MordorSH> %s", input);
+                            
+                            print_prompt();  
+                            printf("%s", input);  
                             fflush(stdout);
                         }
                     } else if (next2 == 'B') { // DOWN arrow
@@ -377,9 +390,11 @@ int main() {
                             input_len = 0;
                         }
                         printf("\33[2K\r"); // clear line
-                        printf("MordorSH> %s", input);
+                        print_prompt();  
+                        printf("%s", input); 
                         fflush(stdout);
                     }
+                    
                 }
             } else {
                 if (input_len < MAX_CMD_LEN - 1) {
