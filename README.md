@@ -2,6 +2,8 @@
 
 MordorSH is a simple UNIX shell written in C.
 
+Feel free to build & run; however, it's a property of [TahmidRaven](https://github.com/TahmidRaven).
+
 ## How to Compile and Run
 
 To compile and run MordorSH, use the following command:
