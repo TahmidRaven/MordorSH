@@ -16,9 +16,10 @@ char *history[HISTORY_SIZE];
 int history_count = 0;
 pid_t child_pid = -1;
 
+
 void show_man() {
     printf("\n--- MordorSH MANUAL ---\n");
-    printf("Created by: Tahmid & Fahmida\n\n");
+    printf("Created by: TahmidRaven\n\n");
     printf("Supported Commands:\n");
     printf("  - Any valid system command (e.g., mkdir,cd, ls, pwd, echo, etc.)\n");
     printf("  - Ctrl+C             : Interrupt the current command\n");
@@ -334,7 +335,7 @@ int main() {
         
         printf("--------------------------------------------------\n");
         
-        printf("Created by: Tahmid & Fahmida\n\n");
+        printf("Created by: TahmidRaven\n\n");
     printf("Type \"man\" to see the list of available commands.\n\n");
 
     while (1) {
